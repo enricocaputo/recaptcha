@@ -4,18 +4,16 @@ title: Contatti
 excerpt: Contattateci
 ---
 <h1>Preventivo Gratuito</h1>
-<script type="text/javascript">
-  var onloadCallback = function() {
-    grecaptcha.render('html_element', {
-      'sitekey' : '6Lcq-OEUAAAAABkwM85y-ZuIJFNl-IIlFaySySOR'
-    });
-  };
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script>
+  function onSubmit(token) {
+    document.getElementById("demo-form").submit();
+  }
 </script>
 
 
-
 <div role="form">
-  <form action="https://submit-form.com/w_XHXtv5zYMRoxCPJe9H7" method="POST" target="_self">
+  <form id="demo-form" action="https://submit-form.com/w_XHXtv5zYMRoxCPJe9H7" method="POST" target="_self">
       <input type="hidden" name="_email.subject" value="Captcha" />
       <input type="checkbox" name="polpot" style="display:none" tabindex="-1" autocomplete="off"/>
       <input type="hidden" name="_redirect" value="https://enricocaputo.github.io/recaptcha/grazie"/>
@@ -50,10 +48,7 @@ excerpt: Contattateci
     </div>
   <br/>
 
-  <div id="html_element"></div>
-
   <br/>
-    <button type="submit" class="button" value="Invia">Invia</button>
+    <button type="submit" class="g-recaptcha button" data-sitekey="6Lcq-OEUAAAAABkwM85y-ZuIJFNl-IIlFaySySOR" data-callback='onSubmit' value="Invia">Invia</button>
   </form>
 </div>
-<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
