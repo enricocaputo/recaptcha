@@ -1,13 +1,25 @@
 ---
 layout: default
 title: Contatti
-excerpt: Contatti
+excerpt: Contattateci
 ---
 <h1>Preventivo Gratuito</h1>
+<script>
+        var onSubmit = function(token) {
+          console.log('success!');
+        };
+
+        var onloadCallback = function() {
+          grecaptcha.render('submit', {
+            'sitekey' : '6Lcq-OEUAAAAABkwM85y-ZuIJFNl-IIlFaySySOR',
+            'callback' : onSubmit
+          });
+
 <div role="form">
-  <form action="https://formspree.io/giardiniere@potasiepe.com" method="POST" >
-      <input type="hidden" name="_language" value="it" />
-      <input type="hidden" name="_subject" value="Richiesta info da Cliente PotaSiepe.com" />
+  <form action="https://submit-form.com/w_XHXtv5zYMRoxCPJe9H7" method="post" target="_blank">
+      <input type="hidden" name="_email.subject" value="Richiesta dal sito Potasiepe" />
+      <input type="checkbox" name="polpot" style="display:none" tabindex="-1" autocomplete="off"/>
+      <input type="hidden" name="_redirect" value="https://enricocaputo.github.io/recaptcha/grazie"/>
   <br/>
     <div class="form-group">
       <label for="nome">Mi chiamo ...</label><br/>
@@ -35,12 +47,24 @@ excerpt: Contatti
   <br/>
     <div class="form-group">
       <label for="Dimensioni-giardino-altro">Dimensioni giardino e altro ...</label><br/>
-      <textarea id="Dimensioni-giardino-altro" name="Dimensioni-giardino-altro" type="text" class="form-control" rows="10" cols="33"></textarea>
+      <textarea id="Dimensioni-giardino-altro" name="Dimensioni-giardino-altro" class="form-control" rows="10" cols="33"></textarea>
     </div>
-    <input type="text" name="_gotcha" style="display:none" />
-    <input type="hidden" name="_next" value="https://www.giardiniere-potasiepe.fvg.it/grazie.html" />
-
   <br/>
-    <button type="submit" class="button" value="Submit">Invia</button>
+    <div class="g-recaptcha" data-sitekey="6Lf-ZuEUAAAAAMzEfDUm0SaaeipsRyrBEx7SlFzT"></div>
+  <br/>
+    <button id="submit" type="submit" class="button" value="Submit">Invia</button>
   </form>
 </div>
+<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer>
+</script>
+
+
+
+<script>
+  window.onload = function() {
+    var $recaptcha = document.querySelector('#g-recaptcha-response');
+    if($recaptcha) {
+        $recaptcha.setAttribute("required", "required");
+    }
+};
+</script>
