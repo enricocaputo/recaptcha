@@ -2,8 +2,8 @@
 version: 3.7.4
 title: recaptcha
 description: recaptcha
-url: https://enricocaputo.github.io/recaptcha
-baseurl: /recaptcha/
+url: https://enricocaputo.github.io
+baseurl: /recaptcha
 repository: https://enricocaputo.github.io/recaptcha
 timezone: Europe/Rome
 encoding: UTF-8
