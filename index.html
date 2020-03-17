@@ -4,31 +4,19 @@ title: Contatti
 excerpt: Contattateci
 ---
 <h1>Preventivo Gratuito</h1>
-<script>
-  function onSubmit(token) {
-    alert('thanks ' + document.getElementById('Abito-a').value);
-  }
-
-  function validate(event) {
-    event.preventDefault();
-    if (!document.getElementById('Abito-a').value) {
-      alert("You must add text to the required field");
-    } else {
-      grecaptcha.execute();
-    }
-  }
-
-  function onload() {
-    var element = document.getElementById('submit');
-    element.onclick = validate;
-  }
+<script type="text/javascript">
+  var onloadCallback = function() {
+    grecaptcha.render('html_element', {
+      'sitekey' : '6Lcq-OEUAAAAABkwM85y-ZuIJFNl-IIlFaySySOR'
+    });
+  };
 </script>
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
 
 
 <div role="form">
-  <form action="https://submit-form.com/w_XHXtv5zYMRoxCPJe9H7" target="_self">
-      <input type="hidden" name="_email.subject" value="Richiesta dal sito Potasiepe" />
+  <form action="https://submit-form.com/w_XHXtv5zYMRoxCPJe9H7" method="POST" target="_self">
+      <input type="hidden" name="_email.subject" value="Captcha" />
       <input type="checkbox" name="polpot" style="display:none" tabindex="-1" autocomplete="off"/>
       <input type="hidden" name="_redirect" value="https://enricocaputo.github.io/recaptcha/grazie"/>
   <br/>
@@ -61,12 +49,11 @@ excerpt: Contattateci
       <textarea id="Dimensioni-giardino-altro" name="Dimensioni-giardino-altro" class="form-control" rows="10" cols="33"></textarea>
     </div>
   <br/>
-  <div id='recaptcha' class="g-recaptcha"
-        data-sitekey="6Lcq-OEUAAAAABkwM85y-ZuIJFNl-IIlFaySySOR"
-        data-callback="onSubmit"
-        data-size="invisible"></div>
+
+  <div id="html_element"></div>
 
   <br/>
-    <button id="submit" type="submit" class="button" value="Invia">Invia</button>
+    <button type="submit" class="button" value="Invia">Invia</button>
   </form>
 </div>
+<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
