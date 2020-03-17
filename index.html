@@ -4,13 +4,18 @@ title: Contatti
 excerpt: Contattateci
 ---
 <h1>Preventivo Gratuito</h1>
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <script>
-  function onSubmit(token) {
-    document.getElementById("demo-form").submit();
-  }
-</script>
+    var onSubmit = function(token) {
+      console.log('success!');
+    };
 
+    var onloadCallback = function() {
+      grecaptcha.render('submit', {
+        'sitekey' : '6Lcq-OEUAAAAABkwM85y-ZuIJFNl-IIlFaySySOR',
+        'callback' : onSubmit
+      });
+    };
+</script>
 
 <div role="form">
   <form id="demo-form" action="https://submit-form.com/w_XHXtv5zYMRoxCPJe9H7" method="POST" target="_self">
@@ -49,6 +54,8 @@ excerpt: Contattateci
   <br/>
 
   <br/>
-    <button type="submit" class="g-recaptcha button" data-sitekey="6Lcq-OEUAAAAABkwM85y-ZuIJFNl-IIlFaySySOR" data-callback='onSubmit' value="Invia">Invia</button>
+    <button id="submit" type="submit" class="button" value="Invia">Invia</button>
   </form>
 </div>
+<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer>
+</script>
