@@ -1,9 +1,9 @@
 ---
 version: 3.7.4
-title: Potasiepe • Giardiniere
-description: Realizzazione e manutenzione di giardini in provincia di Udine e Gorizia
+title: recaptcha
+description: recaptcha
 url: https://enricocaputo.github.io/recaptcha
-baseurl:
+baseurl: /recaptcha/
 repository: https://enricocaputo.github.io/recaptcha
 timezone: Europe/Rome
 encoding: UTF-8
