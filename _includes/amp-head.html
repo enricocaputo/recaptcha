@@ -1,0 +1,96 @@
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{% if page.title and page.title != 'Home' %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+
+  {% assign pagecontent_description = page.excerpt | markdownify | replace: '.', '. ' | replace: '</h2>', ': ' | replace: '</h3>', ': ' | replace: '</h4>', ': ' | strip_html | strip_newlines | replace: '  ', ' ' | truncate: 160 %}
+  <meta name="description" content="{% if pagecontent_description.size > 10 %}{{ pagecontent_description }}{% else %}{{ site.description }}{% endif %}">
+
+  <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+  <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="icon" type="image/png" href="{{ site.baseurl }}/img/ico/favicon.png" sizes="192x192" />
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ site.baseurl }}/img/ico/apple-touch-icon.png" />
+  <link rel="manifest" href="{{ site.baseurl }}/manifest.json" />
+  <meta name="theme-color" content="#004900" />
+
+  <meta property="og:title" content="{{ page.title }}"/>
+  {% if page.image %}<meta property="og:image" content="{{ page.image | prepend: site.baseurl | prepend: site.url }}"/>{% endif %}
+  <meta property="og:url" content="{{ page.url | prepend: site.baseurl | prepend: site.url }}"/>
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="{{ site.title }}"/>
+
+  <meta property="og:description" content="{% if pagecontent_description.size > 10 %}{{ pagecontent_description }}{% else %}{{ site.description }}{% endif %}"/>
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="{{ site.twitter_url }}">
+  <meta name="twitter:title" content="{{ page.title }}" />
+  {% if page.image %}<meta name="twitter:image" content="{{ site.url }}{{ page.image }}" />{% endif %}
+  <meta name="twitter:url" content="{{ site.url }}{{ page.url }}" />
+
+  <meta name="twitter:description" content="{% if pagecontent_description.size > 10 %}{{ pagecontent_description }}{% else %}{{ site.description }}{% endif %}" />
+
+  <link rel="canonical" href="{{ page.url | replace:'/amp/','/consigli-di-giardinaggio/' | prepend: site.url }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="{{ "/sitemap.xml" | prepend: site.baseurl | prepend: site.url }}" />
+  <link rel="search" type="application/opensearchdescription+xml" href="/PotasiepeRicercaPersonalizzata.xml" title="Potasiepe Ricerca Personalizzata" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://google.com/article"
+  },
+  "headline": "Article headline",
+  "image": [
+    "{{ site.url }}{{ page.image }}"
+   ],
+  "datePublished": "{{ page.date }}",
+  "dateModified": "{{ page.last_modified_at }}",
+  "author": {
+    "@type": "Person",
+    "name": "Giardiniere Potasiepe"
+  },
+   "publisher": {
+    "@type": "Organization",
+    "name": "Potasiepe",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ site.url }}/img/amp-logo-60x600px.png"
+    }
+  },
+  "genre" : "{{ page.category }}",
+  "description": "{% if pagecontent_description.size > 10 %}{{ pagecontent_description }}{% else %}{{ site.description }}{% endif %}"
+}
+</script>
+  <style amp-custom>
+    {% capture include_to_scssify %}
+      {% include screen.scss %}
+    {% endcapture %}
+    {{ include_to_scssify | scssify }}
+    .hamburger {
+  padding-left: 10px;
+}
+.sidebar {
+  padding: 10px;
+  margin: 0;
+}
+.sidebar > li {
+  list-style: none;
+  margin-bottom:10px;
+}
+.sidebar a {
+  text-decoration: none;
+}
+.close-sidebar {
+  font-size: 1.5em;
+  padding-left: 5px;
+}
+
+  </style>
+  <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+</head>

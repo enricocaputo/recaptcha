@@ -1,0 +1,124 @@
+---
+version: 3.7.4
+title: Potasiepe • Giardiniere
+description: Realizzazione e manutenzione di giardini in provincia di Udine e Gorizia
+url: https://www.giardiniere-potasiepe.fvg.it
+baseurl:
+repository: https://github.com/enricocaputo/potasiepe-giardiniere-fvg
+timezone: Europe/Rome
+encoding: UTF-8
+lang: it-IT
+name: "potasiepe"
+logo: "/img/amp-logo-60x600px.png"
+twitter:
+  username: potasiepe
+  card: summary
+social:
+  links:
+    - https://www.misterimprese.it/friuli-venezia-giulia/udine/cervignano-del-friuli/giardinaggio-servizi/2571124.html
+    - https://www.facebook.com/giardiniere.potasiepe/
+    - https://twitter.com/potasiepe?lang=it
+    - https://www.paginegialle.it/giardinierepotasiepe_baildd
+    - https://www.paginebianche.it/cervignano-del-friuli/giardiniere-potasiepe.11997753
+    - https://www.yelp.it/biz/potasiepe-cervignano-del-friuli
+
+permalink: pretty
+collections_dir: my_collections
+collections:
+  tagliaerba_rasaerba:
+    output: true
+    permalink: /vendita-online-prodotti-per-giardinaggio/:title
+  servizi_giardinaggio:
+    output: true
+    permalink: /servizi-di-giardinaggio/:title/
+  posts:
+    output: true
+    permalink: /consigli-di-giardinaggio/:title
+  calendario:
+    output: true
+    permalink: /calendario-di-giardinaggio/:title/
+  amp:
+    output: true
+    permalink: /amp/:title/
+
+defaults:
+  - scope:
+      path: "*download"
+    values:
+      sitemap: false
+  - scope:
+      path: "_posts"
+    values:
+      layout: "post"
+      seo:
+        type: "Article"
+      author: "potasiepe"
+      category: "Orto & Giardino"
+      comments: "true"
+      image: "/img/share-potasiepe.jpg"
+  - scope:
+      path: "_casette_giardino"
+    values:
+      layout: "product"
+      seo:
+        type: "webPage"
+  - scope:
+      path: "_piante_fiori"
+    values:
+      layout: "product"
+      seo:
+        type: "webPage"
+  - scope:
+      path: "_tagliaerba_rasaerba"
+    values:
+      layout: "product"
+      seo:
+        type: "webPage"
+  - scope:
+      path: "_calendario"
+    values:
+      layout: "post"
+      author: "potasiepe"
+      comments: "false"
+      seo:
+        type: "Article"
+  - scope:
+      path: "_amp"
+    values:
+      layout: "amp-post"
+      author: "potasiepe"
+      category: "Orto & Giardino"
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jemoji
+
+feed:
+  categories:
+    - Orto & Giardino
+
+paginate: 6
+paginate_path: "/consigli-di-giardinaggio/page:num/"
+markdown: kramdown
+
+social_icons:
+  - Facebook
+  - Twitter
+  - RSS
+exclude:
+  - ".gitignore"
+  - CNAME
+  - README.md
+
+  # Compress
+sass:
+    style: compressed
+
+compress_html:
+  clippings: all
+  comments: ["<!-- ", " -->"]
+  endings: all
+  profile: false
+  startings: [head, body]

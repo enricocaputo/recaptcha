@@ -1,0 +1,31 @@
+---
+layout: default
+---
+<main id='product-page'
+      itemscope
+      itemtype='http://schema.org/Product'
+      data-name='{{ page.name | escape }}'>
+
+      <h1 itemprop='name'>{{ page.name }}</h1>
+      <div class="img-container">
+        <img src="{{ page.image_path }}" alt="{{ page.name}}" title="{{ page.name }}" itemprop='image'/>
+      </div>
+      <h3>Pronta consegna</h3>
+      <p itemprop='itemCondition'><em>{{ page.condition }}</em></p>
+      <p itemprop='brand' content='{{ page.brand }}'><b>{{ page.brand }}</b></p>
+      <p itemprop='offers' itemscope itemtype='http://schema.org/Offer'>
+        <b>
+        <span itemprop='priceCurrency' content='EUR'>€</span>
+        <span itemprop='price' content='{{ page.price }}'>{{ page.price }}</span>
+        </b>
+      </p>
+
+      <div itemprop='aggregateRating'
+        itemscope itemtype='http://schema.org/AggregateRating'>
+        <span style="color: yellow; font-size:22px;">&#9733;&#9733;&#9733;&#9733;&#10025;</span>
+        <span itemprop='ratingValue' content='4.5'></span>
+        <span itemprop='reviewCount' content='{{ page.review }}'>{{ page.review }}</span> recensioni
+      </div>
+
+      <div itemprop='description' class='description'>{{ content }}</div>
+</main>

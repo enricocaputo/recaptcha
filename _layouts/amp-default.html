@@ -1,0 +1,9 @@
+---
+---
+<!doctype html>
+<html ⚡ lang="it-IT">
+  {% include amp-head.html %}
+  <body>
+  {{ content | replace: '<img', '<amp-img height="1" width="1.33" layout="responsive"' }}
+  </body>
+</html>

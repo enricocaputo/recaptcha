@@ -1,0 +1,49 @@
+---
+layout: default
+title: URL Appuntamenti e Contatti
+excerpt: Contatta Potasiepe, fissa un appuntamento, prenota un sopralluogo, richiedi un preventivo gratuito e senza impegno via email e al telefono.
+image: /img/potasiepe.jpg
+permalink: /contatti/
+last_modified_at: 2020-03-15
+---
+<h1>Preventivo Gratuito</h1>
+<div role="form">
+  <form action="https://formspree.io/giardiniere@potasiepe.com" method="POST" >
+      <input type="hidden" name="_language" value="it" />
+      <input type="hidden" name="_subject" value="Richiesta info da Cliente PotaSiepe.com" />
+  <br/>
+    <div class="form-group">
+      <label for="nome">Mi chiamo ...</label><br/>
+      <input id="nome" name="nome" type="text" required="" class="form-control"/>
+    </div>
+  <br/>
+    <div class="form-group">
+      <label for="Abito-a">Abito a ...</label><br/>
+      <input id="Abito-a" name="Abito-a" type="text" required="" class="form-control"/>
+    </div>
+  <br/>
+    <div class="form-group">
+      <label for="tel">N. di Telefono ...</label><br/>
+      <input id="tel" name="tel" type="tel" class="form-input" required=""/>
+    </div>
+  <br/>
+    <div class="form-group">
+    <label for="Richiesta">Avrei bisogno di ...</label><br/>
+    <select id="Richiesta" name="Richiesta" class="form-control">
+      <option value="Potare-Siepe" class="form-control">Potare la Siepe</option>
+      <option value="Tagliare-Erba" class="form-control">Tagliare l'erba</option>
+      <option value="Richiesta-Specificata-Sotto" class="form-control">Altro: lo specifico qui sotto</option>
+    </select>
+    </div>
+  <br/>
+    <div class="form-group">
+      <label for="Dimensioni-giardino-altro">Dimensioni giardino e altro ...</label><br/>
+      <textarea id="Dimensioni-giardino-altro" name="Dimensioni-giardino-altro" type="text" class="form-control" rows="10" cols="33"></textarea>
+    </div>
+    <input type="text" name="_gotcha" style="display:none" />
+    <input type="hidden" name="_next" value="https://www.giardiniere-potasiepe.fvg.it/grazie.html" />
+
+  <br/>
+    <button type="submit" class="button" value="Submit">Invia</button>
+  </form>
+</div>

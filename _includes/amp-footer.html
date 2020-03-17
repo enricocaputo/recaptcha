@@ -1,0 +1,55 @@
+<footer class="diagonal">
+  <div class="container">
+
+    <div class="footer-columns">
+      {% for column in site.data.footer %}
+        <ul class="footer-links">
+          <li>
+            <span class="h2">{{ column.title }}</h2>
+          </li>
+          {% for link in column.links %}
+            <li>
+              <a {% if link.new_window %}target="_blank" rel="noopener"{% endif %} href="{% include relative-src.html src=link.link %}" aria-label="{{ link.name }}" {% if link.social_icon %}class="{{ link.social_icon | slugify }}-icon"{% endif %}>
+                {% if link.social_icon %}
+                  {% include social-icon.html icon=link.social_icon %}
+                {% endif %}
+
+                {{ link.name }}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      {% endfor %}
+
+      <ul class="footer-links">
+        <li>
+          <span class="h2">{{ site.data.company.title }}</span>
+        </li>
+        <li>{{ site.data.company.description }}</li>
+        <li>
+          <h3 id="newsletter">ISCRIVITI ALLA NEWSLETTER</h3>
+        </li>
+        <li>
+          <div role="form">
+          <form rel="nofollow noreferrer" class="tinyletter" action="https://tinyletter.com/potasiepe" method="get" target="_top">
+            <input title="email" type="text" name="email" id="tlemail" required autocomplete="email" placeholder="* mia@email.it" maxlength="55" />
+            <input type="hidden" value="1" name="embed" />
+            <input type="submit" value="OK" />
+          </form>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="legal-line">
+    <div class="container">
+    <p>
+      &copy; {{ site.time | date: '%Y' }} {{ site.data.company.title }} &bull;
+      <a href="/cookie/" title="Norme sulla privacy e cookie">Privacy</a> &bull;
+      <a href="/condizioni-generali-di-vendita/" title="termini e condizioni di vendita">Termini</a>
+    </p>
+    Questo sito utilizza <a href="/cookie/" title="Norme sulla privacy e cookie">cookie</a>. Se prosegui la navigazione accetti che vengano utilizzati.
+    </div>
+  </div>
+</footer>

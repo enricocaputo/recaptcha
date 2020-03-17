@@ -1,0 +1,67 @@
+items:
+
+- sku: p001
+  name: Arte topiaria pom pom
+#  link:
+  image: /img/vivaio/ilex-crenata-nuvole-2m.jpg
+  brand: Potasiepe
+  price: 850
+  ratingValue: 5
+  reviewCount: 2
+  availability: InStock
+  excerpt: Ilex Crenata, altezza 150 - 200 cm
+
+- sku: p002
+  name: Ars topiaria a spirale
+#  link:
+  image: /img/vivaio/leylandi-spirale-2mt.jpg
+  brand: Potasiepe
+  price: 150
+  ratingValue: 5
+  reviewCount: 3
+  availability: InStock
+  excerpt: Leylandii, altezza 2 m c.ca
+
+- sku: p003
+  name: Olivo 15 anni
+#  link:
+  image: /img/vivaio/ulivo-15anni.jpg
+  brand: Potasiepe
+  price: 450
+  ratingValue: 4.5
+  reviewCount: 4
+  availability: InStock
+  excerpt: Olivo 15 anni
+
+- sku: p004
+  name: Olivo 25 anni
+#  link:
+  image: /img/vivaio/ulivo-25anni.jpg
+  brand: Potasiepe
+  price: 650
+  ratingValue: 4.5
+  reviewCount: 4
+  availability: InStock
+  excerpt: Olivo 25 anni
+
+- sku: p005
+  name: Olivo 40 anni
+#  link:
+  image: /img/vivaio/ulivo-40anni.jpg
+  brand: Potasiepe
+  price: 780
+  ratingValue: 4.5
+  reviewCount: 4
+  availability: InStock
+  excerpt: Olivo 40 anni
+
+- sku: p006
+  name: Olivo 50 anni
+#  link:
+  image: /img/vivaio/ulivo-50anni.jpg
+  brand: Potasiepe
+  price: 990
+  ratingValue: 4.5
+  reviewCount: 4
+  availability: InStock
+  excerpt: Olivo 50 anni

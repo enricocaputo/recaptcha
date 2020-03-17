@@ -1,0 +1,15 @@
+<div class="nav" role="navigation" aria-label="Navigazione principale">
+	<ul itemscope itemtype=http://www.schema.org/SiteNavigationElement>
+		{% for link in site.data.navigation.links %}
+			{% assign class = "" %}
+			{% if link.highlight %}
+				{% assign class = class | append: " highlight" %}
+			{% endif %}
+
+			{% if link.link == page.url %}
+				{% assign class = class | append: " active" %}
+			{% endif %}
+			<li itemprop=name><a itemprop=url href="{{ site.baseurl }}{{ link.link }}" class="{{ class }}" {% if link.new_window %}target="_blank"{% endif %}>{{ link.name }}</a></li>
+		{% endfor %}
+	</ul>
+</div>

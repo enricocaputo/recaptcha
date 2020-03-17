@@ -1,0 +1,142 @@
+.container {
+	margin: 0 auto;
+	position: relative;
+	padding: 0 20px;
+	max-width: 1000px;
+}
+
+.rotation {
+	padding: 150px 0;
+	background: #fff;
+	margin-top: -2em;
+
+	&.diagonal {
+		-webkit-transform: skewY(-$section-rotation);
+		-moz-transform: skewY(-$section-rotation);
+		-ms-transform: skewY(-$section-rotation);
+		transform: skewY(-$section-rotation);
+
+		> div {
+			-webkit-transform: skewY($section-rotation);
+			-moz-transform: skewY($section-rotation);
+			-ms-transform: skewY($section-rotation);
+			transform: skewY($section-rotation);
+		}
+	}
+}
+
+footer {
+	@extend .rotation;
+	margin-top: -10em;
+	padding: 100px 0 50px 0;
+	position: relative;
+	background: #003200;
+	color: #fff;
+	line-height: 1.5;
+
+	&,
+	a {
+		color: rgba(255, 255, 255, 0.60);
+	}
+
+	.h2 {
+		font-size: 1.4em;
+		margin: 30px 0;
+		color: rgba(255, 255, 255, 0.75);
+		line-height: 2.8;
+	}
+
+	.footer-columns {
+		display: flex;
+		flex-flow: wrap;
+		margin: -10px -10px 10px -10px;
+	}
+
+	a {
+		text-decoration: none;
+
+		&:hover {
+			color: #fff;
+		}
+	}
+
+	.legal-line {
+		width: 100%;
+		padding: 30px 0 0 0;
+		margin: 0;
+
+		a {
+			font-style: italic;
+		}
+	}
+}
+
+.footer-links {
+	width: 100%;
+	margin: 10px;
+	padding: 0;
+	flex: 1 0 180px;
+
+	li {
+		list-style: none;
+		margin: 15px 0;
+
+		a {
+			svg {
+				fill: #999;
+				margin-right: 10px;
+				transition: fill 0.2s ease;
+				vertical-align: middle;
+				position: relative;
+				top: -2px;
+				width: 22px;
+				height: 22px;
+			}
+
+			&:hover {
+				text-decoration: none;
+
+				svg {
+					fill: #fff;
+				}
+			}
+		}
+	}
+}
+
+.tinyletter {
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	max-width: 300px;
+	input[type=text], input[type=submit] {
+		margin: 0;
+		padding: 10px;
+		border: 1px solid #ccc;
+		border-radius: 0;
+		box-shadow: none;
+	}
+	input[type=text] {
+		width: 80%;
+	}
+	input[type=submit] {
+		width: 20%;
+		font-weight: 500;
+	}
+}
+
+@media(max-width: 1400px) {
+	footer {
+		margin-top: -5em;
+	}
+}
+
+@media(max-width: 700px) {
+	footer {
+		margin-top: -2em;
+
+		.legal-line {
+			padding: 30px 0 70px 0;
+		}
+	}
+}
