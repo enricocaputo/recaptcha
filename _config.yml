@@ -1,5 +1,4 @@
 ---
-version: 3.7.4
 title: recaptcha
 description: recaptcha
 url: https://enricocaputo.github.io/recaptcha
@@ -9,57 +8,8 @@ timezone: Europe/Rome
 encoding: UTF-8
 lang: it-IT
 name: "recaptcha"
-logo: "/img/amp-logo-60x600px.png"
 
 permalink: pretty
-
-defaults:
-  - scope:
-      path: "*download"
-    values:
-      sitemap: false
-  - scope:
-      path: "_posts"
-    values:
-      layout: "post"
-      seo:
-        type: "Article"
-      author: "potasiepe"
-      category: "Orto & Giardino"
-      comments: "true"
-      image: "/img/share-potasiepe.jpg"
-  - scope:
-      path: "_casette_giardino"
-    values:
-      layout: "product"
-      seo:
-        type: "webPage"
-  - scope:
-      path: "_piante_fiori"
-    values:
-      layout: "product"
-      seo:
-        type: "webPage"
-  - scope:
-      path: "_tagliaerba_rasaerba"
-    values:
-      layout: "product"
-      seo:
-        type: "webPage"
-  - scope:
-      path: "_calendario"
-    values:
-      layout: "post"
-      author: "potasiepe"
-      comments: "false"
-      seo:
-        type: "Article"
-  - scope:
-      path: "_amp"
-    values:
-      layout: "amp-post"
-      author: "potasiepe"
-      category: "Orto & Giardino"
 
 plugins:
   - jekyll-feed
@@ -67,12 +17,6 @@ plugins:
   - jekyll-sitemap
   - jemoji
 
-feed:
-  categories:
-    - Orto & Giardino
-
-paginate: 6
-paginate_path: "/consigli-di-giardinaggio/page:num/"
 markdown: kramdown
 
 social_icons:

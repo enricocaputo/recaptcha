@@ -1,89 +1,46 @@
 ---
 layout: default
-title: "POTASIEPE - Giardiniere a Udine e Gorizia"
-excerpt: "Giardiniere a Udine e Gorizia per progettazione e sistemazione giardini, potatura alberi e siepi, taglio erba, manutenzione del verde commerciale e industriale."
-image: /img/potasiepe.jpg
-permalink: /
-last_modified_at: 2019-11-18
+title: Contatti
+excerpt: Contatti
 ---
-<script type="application/ld+json">{"@context":"http://schema.org","@type":"WebSite","url":"https://www.giardiniere-potasiepe.fvg.it/","potentialAction":{"@type":"SearchAction","target":"https://www.giardiniere-potasiepe.fvg.it/cerca/?q={search_term_string}","query-input":"required name=search_term_string"}}</script>
-<div id="logo">
-<img src="{{ site.baseurl }}/img/potasiepe-logo-557x500.png" alt="il logo ufficiale di Potasiepe è un marchio registrato" title="il logo ufficiale di Potasiepe è un marchio registrato">
-</div>
-<h1>Il Giardiniere Potasiepe</h1>
-
-<div class="carousel" >
-  <img class="mySlides" src="{{ site.baseurl }}/img/slides/slide1.jpg" alt="Ars topiaria: muro di siepe" />
-  <img class="mySlides" src="{{ site.baseurl }}/img/slides/slide2.jpg" alt="Piante da siepe in fioriera" />
-  <img class="mySlides" src="{{ site.baseurl }}/img/slides/slide3.jpg" alt="Come potare una siepe di ligustro" />
-  <img class="mySlides" src="{{ site.baseurl }}/img/slides/slide4.jpg" alt="Photinia Red Robin in vaso, altezza 2 m." />
-  <img class="mySlides" src="{{ site.baseurl }}/img/slides/slide5.jpg" alt="Come piantare una siepe" />
-</div>
-
-  <p class="text-center"><strong>Opera in un raggio di 40 km da Cervignano del Friuli, UD </strong></p>
-  <div class="page-content">
-<br/>
-  <h2>Custode del tuo giardino</h2>
-    <i><span class="name">Piacere, Enrico</span></i>
-    <p>Di lavoro <strong>curo gli spazi verdi</strong>. Che si tratti di sfalciare l'erba in un giardino privato, manutenere
-      un parco, livellare e fresare un appezzamento di terra incolto ed abbandonato o abbattere un albero, <strong>mi avvalgo
-      di macchine moderne ed efficienti</strong>. Decespugliatore, tagliaerba, trattorino ecc. hanno un
-      <strong>motore a quattro tempi</strong> in regola con le nuove normative sull'inquinamento. Quando lavoro nei
-      centri urbani sono equipaggiato con <strong>attrezzature a batteria</strong>. <a href="/chi-sono/" aria-label="Chi sono"><strong>Scopri di più</strong> &gt;</a></p>
-<br/>
-    <h3>Giardiniere a Udine e Gorizia</h3>
-    <p>Il mio lavoro di giardiniere mi ha portato nei comuni di Udine, Spilimbergo, Aquileia, Codroipo, Fagagna, Latisana,
-    Manzano, Palmanova, San Giovanni al Natisone, Gorizia , Gradisca d'Isonzo, Grado, Monfalcone , Ronchi dei Legionari ecc.
-    <br/>
-    Scopri tutti i comuni che ho servito nella provincia di
-    <a href="/giardinaggio-udine/" title="Giardinaggio in provincia di Udine, giardiniere a Udine"><strong>Udine</strong></a>
-    e in quella di
-    <a href="/gorizia/" title="Giardinaggio in provincia di Gorizia, giardiniere a Gorizia"><strong>Gorizia</strong></a>.
-    </p>
-  </div>
-<br/>
-
-<h2>La scelta giusta</h2>
-<p>Una <strong>vasta gamma di <a href="/servizi-di-giardinaggio/" aria-label="Scopri tutti i servizi di giardinaggio disponibili">servizi </a>di giardinaggio</strong> svolti con la massima <strong>serietà</strong>, <strong>competenza</strong> e <strong>puntualità</strong>, offerti a <strong><a href="/prezzi/" aria-label="Scopri i prezzi"> prezzi</a> onesti</strong>.
-Un giardiniere esperto sempre lieto di rispondere a tutte le tue domande. <a class="text-center" href="/contatti/" aria-label="Contattami"><strong>Contattami</strong> &gt;</a></p>
-
-<div class="list-collection">
-<ul>
-  {% assign servizi_giardinaggio = site.servizi_giardinaggio | sort: 'order' %}
-  {% for servizi_giardinaggio in servizi_giardinaggio %}
-		<li>
-      <img src="{% include relative-src.html src=servizi_giardinaggio.image_path %}" alt="{{ servizi_giardinaggio.url }}">
-      <div>
-      <h3>{{ servizi_giardinaggio.name }}</h3>
-      <p>{{ servizi_giardinaggio.subtitle }}</p>
-			<a href="{{ site.baseurl }}{{ servizi_giardinaggio.url }}" title="{{ servizi_giardinaggio.url }}"><strong>SCOPRI E PRENOTA</strong> &gt;</a>
-      </div>
-    </li>
-	{% endfor %}
-</ul>
-</div>
-
-<div class="hero">
-  <img src="img/vivaio-potasiepe-alberi-piante.jpg" width="800" height="450" alt="Vivaio Alberi Piante Fiori">
-    <div class="centered">
-      <h2>Vivaio Alberi Piante Fiori</h2>
-      <p>Rendi più bello il tuo giardino. Scegli la tua pianta preferita.</p>
-      <a href="/vivaio/" aria-label="Acquista alberi, piante e fiori"><strong>ACQUISTA ORA</strong> &gt;</a>
+<h1>Preventivo Gratuito</h1>
+<div role="form">
+  <form action="https://formspree.io/giardiniere@potasiepe.com" method="POST" >
+      <input type="hidden" name="_language" value="it" />
+      <input type="hidden" name="_subject" value="Richiesta info da Cliente PotaSiepe.com" />
+  <br/>
+    <div class="form-group">
+      <label for="nome">Mi chiamo ...</label><br/>
+      <input id="nome" name="nome" type="text" required="" class="form-control"/>
     </div>
+  <br/>
+    <div class="form-group">
+      <label for="Abito-a">Abito a ...</label><br/>
+      <input id="Abito-a" name="Abito-a" type="text" required="" class="form-control"/>
+    </div>
+  <br/>
+    <div class="form-group">
+      <label for="tel">N. di Telefono ...</label><br/>
+      <input id="tel" name="tel" type="tel" class="form-input" required=""/>
+    </div>
+  <br/>
+    <div class="form-group">
+    <label for="Richiesta">Avrei bisogno di ...</label><br/>
+    <select id="Richiesta" name="Richiesta" class="form-control">
+      <option value="Potare-Siepe" class="form-control">Potare la Siepe</option>
+      <option value="Tagliare-Erba" class="form-control">Tagliare l'erba</option>
+      <option value="Richiesta-Specificata-Sotto" class="form-control">Altro: lo specifico qui sotto</option>
+    </select>
+    </div>
+  <br/>
+    <div class="form-group">
+      <label for="Dimensioni-giardino-altro">Dimensioni giardino e altro ...</label><br/>
+      <textarea id="Dimensioni-giardino-altro" name="Dimensioni-giardino-altro" type="text" class="form-control" rows="10" cols="33"></textarea>
+    </div>
+    <input type="text" name="_gotcha" style="display:none" />
+    <input type="hidden" name="_next" value="https://www.giardiniere-potasiepe.fvg.it/grazie.html" />
+
+  <br/>
+    <button type="submit" class="button" value="Submit">Invia</button>
+  </form>
 </div>
-<br/>
-<div>
-  <h2><a href="/consigli-di-giardinaggio/" title="blog di giardinaggio, orto e giardino">Per l'orto e il giardino</a></h2>
-  Le ultimissime notizie dal blog:
-  <ul class="post-list">
-    {% for post in site.posts limit: 5 %}
-      <li>
-        <h3>
-          &#9752; <mark>{{ post.title }}</mark> <a class="post-link" href="{{ post.url | prepend: site.baseurl }}"> .. continua </a>
-        </h3>
-      </li>
-    {% endfor %}
-  </ul>
-</div>
-<br/>
-<script>var myIndex=0;function carousel(){var e,l=document.getElementsByClassName("mySlides");for(e=0;e<l.length;e++)l[e].style.display="none";++myIndex>l.length&&(myIndex=1),l[myIndex-1].style.display="block",setTimeout(carousel,2e3)}carousel();</script>
