@@ -6,12 +6,12 @@ excerpt: Contattateci
 <h1>Preventivo Gratuito</h1>
 <script>
   function onSubmit(token) {
-    alert('thanks ' + document.getElementsByClassName('required').value);
+    alert('thanks ' + document.getElementById('Abito-a').value);
   }
 
   function validate(event) {
     event.preventDefault();
-    if (!document.getElementsByClassName('required').value) {
+    if (!document.getElementById('Abito-a').value) {
       alert("You must add text to the required field");
     } else {
       grecaptcha.execute();
@@ -27,24 +27,24 @@ excerpt: Contattateci
 
 
 <div role="form">
-  <form action="https://submit-form.com/w_XHXtv5zYMRoxCPJe9H7" method="post" target="_self">
+  <form action="https://submit-form.com/w_XHXtv5zYMRoxCPJe9H7" target="_self">
       <input type="hidden" name="_email.subject" value="Richiesta dal sito Potasiepe" />
       <input type="checkbox" name="polpot" style="display:none" tabindex="-1" autocomplete="off"/>
       <input type="hidden" name="_redirect" value="https://enricocaputo.github.io/recaptcha/grazie"/>
   <br/>
     <div class="form-group">
       <label for="nome">Mi chiamo ...</label><br/>
-      <input id="nome" name="nome" type="text" required="" class="form-control required"/>
+      <input id="nome" name="nome" type="text" required="" class="form-control"/>
     </div>
   <br/>
     <div class="form-group">
       <label for="Abito-a">Abito a ...</label><br/>
-      <input id="Abito-a" name="Abito-a" type="text" required="" class="form-control required"/>
+      <input id="Abito-a" name="Abito-a" type="text" required="" class="form-control"/>
     </div>
   <br/>
     <div class="form-group">
       <label for="tel">N. di Telefono ...</label><br/>
-      <input id="tel" name="tel" type="tel" class="form-input required" required=""/>
+      <input id="tel" name="tel" type="tel" class="form-input" required=""/>
     </div>
   <br/>
     <div class="form-group">
@@ -67,6 +67,6 @@ excerpt: Contattateci
         data-size="invisible"></div>
 
   <br/>
-    <button id="submit" type="submit" class="button" value="Submit">Invia</button>
+    <button id="submit" type="submit" class="button" value="Invia">Invia</button>
   </form>
 </div>
