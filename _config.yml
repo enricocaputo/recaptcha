@@ -2,44 +2,16 @@
 version: 3.7.4
 title: Potasiepe • Giardiniere
 description: Realizzazione e manutenzione di giardini in provincia di Udine e Gorizia
-url: https://www.giardiniere-potasiepe.fvg.it
+url: https://enricocaputo.github.io/recaptcha
 baseurl:
-repository: https://github.com/enricocaputo/potasiepe-giardiniere-fvg
+repository: https://enricocaputo.github.io/recaptcha
 timezone: Europe/Rome
 encoding: UTF-8
 lang: it-IT
-name: "potasiepe"
+name: "recaptcha"
 logo: "/img/amp-logo-60x600px.png"
-twitter:
-  username: potasiepe
-  card: summary
-social:
-  links:
-    - https://www.misterimprese.it/friuli-venezia-giulia/udine/cervignano-del-friuli/giardinaggio-servizi/2571124.html
-    - https://www.facebook.com/giardiniere.potasiepe/
-    - https://twitter.com/potasiepe?lang=it
-    - https://www.paginegialle.it/giardinierepotasiepe_baildd
-    - https://www.paginebianche.it/cervignano-del-friuli/giardiniere-potasiepe.11997753
-    - https://www.yelp.it/biz/potasiepe-cervignano-del-friuli
 
 permalink: pretty
-collections_dir: my_collections
-collections:
-  tagliaerba_rasaerba:
-    output: true
-    permalink: /vendita-online-prodotti-per-giardinaggio/:title
-  servizi_giardinaggio:
-    output: true
-    permalink: /servizi-di-giardinaggio/:title/
-  posts:
-    output: true
-    permalink: /consigli-di-giardinaggio/:title
-  calendario:
-    output: true
-    permalink: /calendario-di-giardinaggio/:title/
-  amp:
-    output: true
-    permalink: /amp/:title/
 
 defaults:
   - scope:
